@@ -1,0 +1,20 @@
+SET SERVEROUTPUT ON;
+
+DECLARE
+V_LOOPCOUNTER INT := 0;
+
+BEGIN
+    LOOP
+        V_LOOPCOUNTER := V_LOOPCOUNTER + 1;
+        DBMS_OUTPUT.put_line('Şuanki Değer:' || V_LOOPCOUNTER);
+        IF V_LOOPCOUNTER = 10 THEN
+        EXIT;
+        END IF;
+    END LOOP;
+END;
+/
+BEGIN
+    FOR V_LOOPCOUNTER IN 1..10 LOOP
+    DBMS_OUTPUT.put_line('Şuanki Değer (FOR LOOP IN):' || V_LOOPCOUNTER);
+    END LOOP;
+    END;

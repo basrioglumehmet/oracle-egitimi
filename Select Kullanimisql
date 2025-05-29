@@ -1,0 +1,5 @@
+declare
+toplam_veri_sayisi int(8);
+BEGIN
+DBMS_OUTPUT.
+end;
